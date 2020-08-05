@@ -1,0 +1,87 @@
+{
+  "id": "SNAPSHOT",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 360,
+      "height": 480
+    },
+    {
+      "label": "tablet",
+      "width": 769,
+      "height": 768
+    },
+    {
+      "label": "desktop",
+      "width": 1140,
+      "height": 768
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "Homepage",
+      "cookiePath": "tests/visualRegression/cookies/cookies.json",
+      "url": "http://localhost:3000/",
+      "referenceUrl": "https://cms-frontend.service.shared.qa.noths.com/",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Gift Cards",
+      "url": "http://localhost:3000/gift-cards",
+      "referenceUrl": "https://cms-frontend.service.shared.qa.noths.com/gift-cards",
+      "postInteractionWait": 0,
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Text Template",
+      "url": "http://localhost:3000/about/shopper-terms",
+      "referenceUrl": "https://cms-frontend.service.shared.qa.noths.com/about/shopper-terms",
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold": 0.01,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "404 Page",
+      "url": "http://localhost:3000/pageNotFound",
+      "referenceUrl": "https://cms-frontend.service.shared.qa.noths.com/terms-and-conditions/pagethatdoesntexist",
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold": 0.01,
+      "requireSameDimensions": true
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "tests/visualRegression/reference",
+    "bitmaps_test": "tests/visualRegression/backstop/bitmaps_test",
+    "engine_scripts": "tests/visualRegression/backstop/engine_scripts",
+    "html_report": "tests/visualRegression/backstop/html_report",
+    "ci_report": "tests/visualRegression/backstop/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

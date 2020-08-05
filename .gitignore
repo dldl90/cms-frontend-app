@@ -1,0 +1,16 @@
+# Node
+node_modules
+
+# Project
+dist
+server-production.js
+build
+.DS_Store
+**/*/.DS_Store
+**/.DS_Store
+public/template-compiled.js
+public/template.html
+coverage
+tests/visualRegression/backstop
+tests/visualRegression/backstop_data
+test-results.xml
